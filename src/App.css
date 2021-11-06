@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.custom-shape-divider-bottom-1636180054 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1636180054 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 133px;
+}
+
+.custom-shape-divider-bottom-1636180054 .shape-fill {
+  fill: #000000;
+}
