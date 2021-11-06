@@ -88,12 +88,12 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container style={{ height: "100vh", width: "100vw" }}>
+      <Grid container style={{ height: "100vh", width: "100%" }}>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
               <Background />
-              <Box p={12} pt={10} style={{ width: "100vw" }}>
+              <Box p={12} pt={10} style={{ width: "100%" }}>
                 <Box style={{ height: "60%", width: "100%" }}>
                   <Navbar />
                 </Box>
@@ -112,7 +112,7 @@ const App = () => {
           </WalletProvider>
         </ConnectionProvider>
       </Grid>
-      <Grid container style={{ height: "100vh", width: "100vw" }}>
+      <Grid container style={{ height: "100vh", width: "100%" }}>
         <Detail />
       </Grid>
     </ThemeProvider>
