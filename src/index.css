@@ -4,9 +4,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #cac9d4;
+  background-color: #afaec0;
   color: #ffffff;
   overflow: "hidden";
+  margin: 0px;
+  max-width: 100%;
 }
 
 code {

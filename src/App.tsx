@@ -26,6 +26,7 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Roadmap from "./components/Roadmap";
+import ImgCarousel from "./components/ImgCarousel";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -117,6 +118,9 @@ const App = () => {
         <Detail />
       </Grid>
       <Grid container style={{ height: "100vh", width: "100%" }}>
+        <ImgCarousel />
+      </Grid>
+      <Grid container style={{ height: "100vh", width: "100%" }}>
         <Roadmap />
       </Grid>
     </ThemeProvider>
@@ -124,3 +128,4 @@ const App = () => {
 };
 
 export default App;
+
