@@ -2,6 +2,10 @@ import "./App.css";
 import { useMemo } from "react";
 import { useEffect } from "react";
 import Image from "./images/BG4W.png";
+import TeamImage1 from "./images/alex.png";
+import TeamImage2 from "./images/shadow.png";
+import TeamImage3 from "./images/mad.png";
+import TeamImage4 from "./images/darksider.png";
 
 import Home from "./Home";
 
@@ -31,6 +35,7 @@ import Roadmap from "./components/Roadmap";
 import Heading from "./components/HeadingComp";
 import ImgCarousel from "./components/ImgCarousel";
 import Faq from "./components/Faq";
+import Team from "./components/Team";
 import { ScatterPlot } from "@material-ui/icons";
 
 const treasury = new anchor.web3.PublicKey(
@@ -92,7 +97,7 @@ const App = () => {
   );
 
   useEffect(() => {
-    console.log("hello")
+    console.log("hello");
   });
 
   return (
@@ -101,7 +106,6 @@ const App = () => {
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
-
               <Box
                 p={12}
                 pt={10}
@@ -169,12 +173,41 @@ const App = () => {
         <Heading
           title={"FAQ"}
           description={
-            " Below are the most common and important questions to get you started on purchasing a VeeFriends token."
+            "Below are the most common and important questions to get you started on purchasing a VeeFriends token."
           }
         />
       </Grid>
       <Grid container style={{ width: "100%", backgroundColor: "black" }}>
         <Faq />
+      </Grid>
+      <Grid
+        container
+        style={{
+          width: "100%",
+          backgroundColor: "black",
+          paddingTop: "100px",
+          paddingBottom: "40px",
+        }}
+      >
+        <Heading
+          title={"Team"}
+          description={
+            "Sanctuary Labs is a team of friends that came together to build with our Art. We've been told that our Art won't amount to something. We are here to prove our family and the world wrong."
+          }
+        />
+      </Grid>
+      <Grid
+        container
+        style={{
+          width: "100%",
+          backgroundColor: "black",
+          paddingLeft: "40px",
+        }}
+      >
+        <Team image={TeamImage1} imageName={"Soldier"} />
+        <Team image={TeamImage2} imageName={"Alex"} />
+        <Team image={TeamImage3} imageName={"Darksider"} />
+        <Team image={TeamImage4} imageName={"Mad"} />
       </Grid>
     </ThemeProvider>
   );
