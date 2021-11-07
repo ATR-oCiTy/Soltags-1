@@ -26,8 +26,9 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Roadmap from "./components/Roadmap";
-import RoadmapHeading from "./components/RoadmapHeading";
+import Heading from "./components/HeadingComp";
 import ImgCarousel from "./components/ImgCarousel";
+import Faq from "./components/Faq";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -129,11 +130,34 @@ const App = () => {
           paddingBottom: "100px",
         }}
       >
-        <RoadmapHeading />
+        <Heading
+          title={"Roadmap"}
+          description={
+            "This roadmap outlines our goals and where we want to take MekaVerse. We have a lot of ideas and concepts that we are working on. It may evolve over time and hopefully become even better!"
+          }
+        />
       </Grid>
 
       <Grid container style={{ width: "100%", backgroundColor: "black" }}>
         <Roadmap />
+      </Grid>
+      <Grid
+        container
+        style={{
+          width: "100%",
+          backgroundColor: "black",
+          paddingTop: "100px",
+        }}
+      >
+        <Heading
+          title={"FAQ"}
+          description={
+            " Below are the most common and important questions to get you started on purchasing a VeeFriends token."
+          }
+        />
+      </Grid>
+      <Grid container style={{ width: "100%", backgroundColor: "black" }}>
+        <Faq />
       </Grid>
     </ThemeProvider>
   );
