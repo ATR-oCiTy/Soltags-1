@@ -21,7 +21,7 @@ const Detail = () => {
         }}
       >
         <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+          <h2 className="solColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
           <p>
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris

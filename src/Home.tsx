@@ -177,62 +177,66 @@ const Home = (props: HomeProps) => {
       <div
         style={{
           textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         {wallet ? (
           <Card
             style={{
-              width: "100%",
+              width: "50%",
+              backgroundColor: "rgba(16,25,33,0.9)",
             }}
           >
             <CardContent>
-              <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
+              <p>{wallet.publicKey.toBase58() || ""}</p>
 
-              <p>Balance: {(balance || 0).toLocaleString()} SOL</p>
+              <p>BALANCE : {(balance || 0).toLocaleString()} SOL</p>
 
-              <p>Total Available: {itemsAvailable}</p>
+              <p>REDEEMED : {itemsRedeemed}</p>
 
-              <p>Redeemed: {itemsRedeemed}</p>
+              <p>RENAINING : {itemsRemaining}</p>
 
-              <p>Remaining: {itemsRemaining}</p>
+              <MintButton
+                disabled={isSoldOut || isMinting || !isActive}
+                onClick={onMint}
+                variant="contained"
+              >
+                {isSoldOut ? (
+                  "SOLD OUT"
+                ) : isActive ? (
+                  isMinting ? (
+                    <CircularProgress />
+                  ) : (
+                    "MINT"
+                  )
+                ) : (
+                  <Countdown
+                    date={startDate}
+                    onMount={({ completed }) => completed && setIsActive(true)}
+                    onComplete={() => setIsActive(true)}
+                    renderer={renderCounter}
+                  />
+                )}
+              </MintButton>
             </CardContent>
           </Card>
         ) : null}
       </div>
       <Grid
         container
-        direction='column'
-        justifyContent='center'
-        alignItems='center'
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        style={{
+          marginTop: "30vh",
+        }}
       >
-        <MintContainer>
-          {!wallet ? (
-            <ConnectButton>Connect Wallet</ConnectButton>
-          ) : (
-            <MintButton
-              disabled={isSoldOut || isMinting || !isActive}
-              onClick={onMint}
-              variant='contained'
-            >
-              {isSoldOut ? (
-                "SOLD OUT"
-              ) : isActive ? (
-                isMinting ? (
-                  <CircularProgress />
-                ) : (
-                  "MINT"
-                )
-              ) : (
-                <Countdown
-                  date={startDate}
-                  onMount={({ completed }) => completed && setIsActive(true)}
-                  onComplete={() => setIsActive(true)}
-                  renderer={renderCounter}
-                />
-              )}
-            </MintButton>
-          )}
-        </MintContainer>
+        {!wallet ? (
+          <MintContainer>
+            {!wallet ? <ConnectButton>Connect Wallet</ConnectButton> : null}
+          </MintContainer>
+        ) : null}
       </Grid>
 
       <Snackbar

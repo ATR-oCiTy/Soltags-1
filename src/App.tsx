@@ -119,10 +119,10 @@ const App = () => {
                 }}
               >
                 <Background />
-                <Box style={{ height: "60%", width: "100%" }}>
+                <Box style={{ height: "20%", width: "100%" }}>
                   <Navbar />
                 </Box>
-                <Grid item xs={12}>
+                <Grid item xs={12} style={{height:"30vh"}}>
                   <Home
                     candyMachineId={candyMachineId}
                     config={config}

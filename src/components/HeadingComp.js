@@ -4,7 +4,7 @@ const Heading = (props) => {
   return (
     <Grid container item align='center'>
       <Grid item xs={12}>
-        <Typography variant='h2'>{props.title}</Typography>
+        <Typography variant='h2' className="solColor">{props.title}</Typography>
       </Grid>
       <Grid
         item

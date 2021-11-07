@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const FaqComp = (props) => {
   return (
     <Grid item xs={12}>
-      <Box border={3} borderRadius='borderRadius' mx={5} my={1}>
+      <Box border={3} borderRadius='borderRadius' mx={5} my={1} className="faqBorder">
         <Accordion square={true}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Box display='flex' flexDirection='row' color='white'>
