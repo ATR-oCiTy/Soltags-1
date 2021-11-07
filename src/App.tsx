@@ -1,6 +1,6 @@
 import "./App.css";
 import { useMemo } from "react";
-
+import { useEffect } from "react";
 import Image from "./images/BG4W.png";
 
 import Home from "./Home";
@@ -31,6 +31,7 @@ import Roadmap from "./components/Roadmap";
 import Heading from "./components/HeadingComp";
 import ImgCarousel from "./components/ImgCarousel";
 import Faq from "./components/Faq";
+import { ScatterPlot } from "@material-ui/icons";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -90,26 +91,30 @@ const App = () => {
     []
   );
 
+  useEffect(() => {
+    console.log("hello")
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container style={{ height: "100vh", width: "100%" }}>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
-              <Background />
+
               <Box
                 p={12}
                 pt={10}
                 style={{
-                  width: "100vw",
                   backgroundImage: `url(${Image})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
-
-                  height: "100vh",
+                  backgroundAttachment: "fixed",
+                  width: "100%",
                 }}
               >
+                <Background />
                 <Box style={{ height: "60%", width: "100%" }}>
                   <Navbar />
                 </Box>

@@ -21,3 +21,16 @@
 .custom-shape-divider-bottom-1636180054 .shape-fill {
   fill: #000000;
 }
+
+.bground {
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-size: cover;
+    width: 100%;
+  }
+}

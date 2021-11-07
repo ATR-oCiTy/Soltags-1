@@ -1,14 +1,15 @@
 import { Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import "./../carousel.scss"
+import img1 from ".././images/133.jpg";
 
 const slides = [
     {
-      title: "Machu Picchu",
+      title: "Machaane Machaane Machu",
       subtitle: "Peru",
       description: "Adventure is never far away",
       image:
-        "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        img1
     },
     {
       title: "Chamonix",
