@@ -195,7 +195,7 @@ const Home = (props: HomeProps) => {
 
               <p>REDEEMED : {itemsRedeemed}</p>
 
-              <p>RENAINING : {itemsRemaining}</p>
+              <p>REMAINING : {itemsRemaining}</p>
 
               <MintButton
                 disabled={isSoldOut || isMinting || !isActive}

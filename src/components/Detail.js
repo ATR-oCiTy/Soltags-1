@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 
-const Detail = () => {
+const Detail = ({image}) => {
   return (
     <Grid
       container
@@ -44,7 +44,7 @@ const Detail = () => {
       >
         <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
           <img
-            src='https://i.imgur.com/qA6t4QN.gif'
+            src={image}
             alt='...'
             style={{ height: "60vh" }}
           />

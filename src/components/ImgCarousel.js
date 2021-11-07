@@ -139,7 +139,7 @@ const ImgCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch({ type: "PREV" });
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

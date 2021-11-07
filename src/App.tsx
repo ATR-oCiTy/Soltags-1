@@ -6,6 +6,8 @@ import TeamImage1 from "./images/alex.png";
 import TeamImage2 from "./images/shadow.png";
 import TeamImage3 from "./images/mad.png";
 import TeamImage4 from "./images/darksider.png";
+import artGIF from "./images/tagGIF.gif";
+
 
 import Home from "./Home";
 
@@ -138,7 +140,7 @@ const App = () => {
         </ConnectionProvider>
       </Grid>
       <Grid container style={{ height: "100vh", width: "100%" }}>
-        <Detail />
+        <Detail image={artGIF}/>
       </Grid>
       <Grid container style={{ height: "100vh", width: "100%" }}>
         <ImgCarousel />
