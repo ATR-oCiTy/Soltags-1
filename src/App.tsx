@@ -1,6 +1,8 @@
 import "./App.css";
 import { useMemo } from "react";
 
+import Image from "./images/BG4W.png";
+
 import Home from "./Home";
 
 import * as anchor from "@project-serum/anchor";
@@ -97,7 +99,19 @@ const App = () => {
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
               <Background />
-              <Box p={12} pt={10} style={{ width: "100%" }}>
+              <Box
+                p={12}
+                pt={10}
+                style={{
+                  width: "100vw",
+                  backgroundImage: `url(${Image})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+
+                  height: "100vh",
+                }}
+              >
                 <Box style={{ height: "60%", width: "100%" }}>
                   <Navbar />
                 </Box>
