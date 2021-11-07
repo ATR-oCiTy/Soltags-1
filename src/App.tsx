@@ -147,7 +147,7 @@ const App = () => {
         container
         style={{
           width: "100%",
-          backgroundColor: "black",
+          backgroundColor: "#101921;",
           paddingBottom: "100px",
         }}
       >
@@ -159,14 +159,14 @@ const App = () => {
         />
       </Grid>
 
-      <Grid container style={{ width: "100%", backgroundColor: "black" }}>
+      <Grid container style={{ width: "100%", backgroundColor: "#101921;" }}>
         <Roadmap />
       </Grid>
       <Grid
         container
         style={{
           width: "100%",
-          backgroundColor: "black",
+          backgroundColor: "#101921;",
           paddingTop: "100px",
         }}
       >
@@ -177,14 +177,14 @@ const App = () => {
           }
         />
       </Grid>
-      <Grid container style={{ width: "100%", backgroundColor: "black" }}>
+      <Grid container style={{ width: "100%", backgroundColor: "#101921;" }}>
         <Faq />
       </Grid>
       <Grid
         container
         style={{
           width: "100%",
-          backgroundColor: "black",
+          backgroundColor: "#101921;",
           paddingTop: "100px",
           paddingBottom: "40px",
         }}
@@ -200,7 +200,7 @@ const App = () => {
         container
         style={{
           width: "100%",
-          backgroundColor: "black",
+          backgroundColor: "#101921;",
           paddingLeft: "40px",
         }}
       >

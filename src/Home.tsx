@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar, Grid } from "@material-ui/core";
+import {
+  Button,
+  CircularProgress,
+  Snackbar,
+  Grid,
+  Card,
+  CardContent,
+} from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
@@ -167,17 +174,31 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      {wallet && (
-        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-      )}
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        {wallet ? (
+          <Card
+            style={{
+              width: "100%",
+            }}
+          >
+            <CardContent>
+              <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+              <p>Balance: {(balance || 0).toLocaleString()} SOL</p>
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
+              <p>Total Available: {itemsAvailable}</p>
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+              <p>Redeemed: {itemsRedeemed}</p>
 
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
+              <p>Remaining: {itemsRemaining}</p>
+            </CardContent>
+          </Card>
+        ) : null}
+      </div>
       <Grid
         container
         direction='column'
