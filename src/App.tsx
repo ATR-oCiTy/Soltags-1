@@ -27,6 +27,11 @@ import Navbar from "./components/Navbar";
 import Detail from "./components/Detail";
 import Roadmap from "./components/Roadmap";
 import ImgCarousel from "./components/ImgCarousel";
+const {
+  Fullpage,
+  FullPageSections,
+  FullpageSection,
+} = require("@ap.cx/react-fullpage");
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -90,42 +95,53 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container style={{ height: "100vh", width: "100%" }}>
-        <ConnectionProvider endpoint={endpoint}>
-          <WalletProvider wallets={wallets} autoConnect={true}>
-            <WalletDialogProvider>
-              <Background />
-              <Box p={12} pt={10} style={{ width: "100%" }}>
-                <Box style={{ height: "60%", width: "100%" }}>
-                  <Navbar />
-                </Box>
-                <Grid item xs={12}>
-                  <Home
-                    candyMachineId={candyMachineId}
-                    config={config}
-                    connection={connection}
-                    startDate={startDateSeed}
-                    treasury={treasury}
-                    txTimeout={txTimeout}
-                  />
-                </Grid>
-              </Box>
-            </WalletDialogProvider>
-          </WalletProvider>
-        </ConnectionProvider>
-      </Grid>
-      <Grid container style={{ height: "100vh", width: "100%" }}>
-        <Detail />
-      </Grid>
-      <Grid container style={{ height: "100vh", width: "100%" }}>
-        <ImgCarousel />
-      </Grid>
-      <Grid container style={{ height: "100vh", width: "100%" }}>
-        <Roadmap />
-      </Grid>
+      <Fullpage>
+        <FullPageSections>
+          <FullpageSection>
+            <Grid container style={{ height: "100vh", width: "100%" }}>
+              <ConnectionProvider endpoint={endpoint}>
+                <WalletProvider wallets={wallets} autoConnect={true}>
+                  <WalletDialogProvider>
+                    <Background />
+                    <Box p={12} pt={10} style={{ width: "100%" }}>
+                      <Box style={{ height: "60%", width: "100%" }}>
+                        <Navbar />
+                      </Box>
+                      <Grid item xs={12}>
+                        <Home
+                          candyMachineId={candyMachineId}
+                          config={config}
+                          connection={connection}
+                          startDate={startDateSeed}
+                          treasury={treasury}
+                          txTimeout={txTimeout}
+                        />
+                      </Grid>
+                    </Box>
+                  </WalletDialogProvider>
+                </WalletProvider>
+              </ConnectionProvider>
+            </Grid>
+          </FullpageSection>
+          <FullpageSection>
+            <Grid container style={{ height: "100vh", width: "100%" }}>
+              <Detail />
+            </Grid>
+          </FullpageSection>
+          <FullpageSection>
+            <Grid container style={{ height: "100vh", width: "100%" }}>
+              <ImgCarousel />
+            </Grid>
+          </FullpageSection>
+          <FullpageSection style={{}}>
+            <Grid container style={{width: "100%"}}>
+              <Roadmap />
+            </Grid>
+          </FullpageSection>
+        </FullPageSections>
+      </Fullpage>
     </ThemeProvider>
   );
 };
 
 export default App;
-

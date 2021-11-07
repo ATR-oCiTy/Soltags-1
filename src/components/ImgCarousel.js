@@ -153,7 +153,7 @@ const ImgCarousel = () => {
       direction="row"
       alignItems="center"
       justifyContent="center"
-      style={{ minHeight: "100vh", maxWidth: "100vw" }}
+      style={{ minHeight: "100vh", maxWidth: "100vw", backgroundColor: "black" }}
     >
       <Grid
         item

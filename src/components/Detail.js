@@ -12,7 +12,8 @@ const Detail = () => {
     >
       <Grid
         item
-        xs={6}
+        md={6}
+        sm={12}
         style={{
           display: "flex",
           alignItems: "center",
@@ -33,18 +34,21 @@ const Detail = () => {
       </Grid>
       <Grid
         item
-        xs={6}
+        md={6}
+        sm={12}
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
+        <div style={{paddingLeft: "15%", paddingRight: "15%" }}>
         <img
           src="https://i.imgur.com/qA6t4QN.gif"
           alt="..."
-          style={{ height: "70vh" }}
+          style={{ height: "60vh"}}
         />
+        </div>
       </Grid>
     </Grid>
   );
