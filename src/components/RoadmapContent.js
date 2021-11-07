@@ -5,7 +5,7 @@ const RoadmapContent = (props) => {
   return (
     <VerticalTimelineElement
       className='vertical-timeline-element--work'
-      contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+      contentStyle={{ background: "#39454a", color: "#989d9e" }}
       contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
       iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
     >
