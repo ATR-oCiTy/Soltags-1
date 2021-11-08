@@ -1,42 +1,64 @@
 import { Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import "./../carousel.scss";
-import img1 from ".././images/133.jpg";
+import img1 from ".././images/img1.jpg";
+import img2 from ".././images/img2.jpg";
+import img3 from ".././images/img3.jpg";
+import img4 from ".././images/img4.jpg";
+import img5 from ".././images/img5.jpg";
+import img6 from ".././images/img6.jpg";
+import img7 from ".././images/img7.jpg";
+import img8 from ".././images/img8.jpg";
+
 
 const slides = [
   {
-    title: "Machaane Machaane Machu",
-    subtitle: "Peru",
-    description: "Adventure is never far away",
+    title: "",
+    subtitle: "",
+    description: "",
     image: img1,
   },
   {
-    title: "Chamonix",
-    subtitle: "France",
-    description: "Let your dreams come true",
-    image:
-      "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img2,
+    },
+  {
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img3,
   },
   {
-    title: "Mimisa Rocks",
-    subtitle: "Australia",
-    description: "A piece of heaven",
-    image:
-      "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img4,
   },
   {
-    title: "Four",
-    subtitle: "Australia",
-    description: "A piece of heaven",
-    image:
-      "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+    title: "",
+    subtitle: "",
+    description: "",
+    image:  img5,
   },
   {
-    title: "Five",
-    subtitle: "Australia",
-    description: "A piece of heaven",
-    image:
-      "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img6,
+  },
+  {
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img7,
+  },
+  {
+    title: "",
+    subtitle: "",
+    description: "",
+    image: img8,
   },
 ];
 

@@ -30,7 +30,7 @@ const Detail = ({image}) => {
           justifyContent: "center",
         }}
       >
-        <div data-aos="fade-right" style={{ paddingLeft: "15%", paddingRight: "15%" }}>
+        <div data-aos="fade-right" style={{ paddingLeft: "20%", paddingRight: "20%" }}>
           <h2 className="solColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
           <p>
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

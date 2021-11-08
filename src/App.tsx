@@ -100,7 +100,6 @@ const App = () => {
   );
 
   useEffect(() => {
-    console.log("hello");
     AOS.init({
       duration: 1000,
       mirror: true,
@@ -114,7 +113,6 @@ const App = () => {
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
               <Box
-                p={12}
                 pt={10}
                 style={{
                   backgroundImage: `url(${Image})`,
@@ -126,7 +124,7 @@ const App = () => {
                 }}
               >
                 <Background />
-                <Box style={{ height: "20%", width: "100%" }}>
+                <Box style={{ height: "20%", width: "100%", paddingLeft: "20vh", paddingRight:"20vh" }}>
                   <Navbar />
                 </Box>
                 <Grid item xs={12} style={{ height: "30vh" }}>

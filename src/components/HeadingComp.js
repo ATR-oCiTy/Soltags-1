@@ -9,7 +9,7 @@ const Heading = (props) => {
       <Grid
         item
         xs={12}
-        style={{ paddingLeft: "320px", paddingRight: "320px" }}
+        style={{ paddingLeft: "10%", paddingRight: "10%" }}
       >
         <h3>{props.description}</h3>
       </Grid>

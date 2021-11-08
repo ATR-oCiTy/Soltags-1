@@ -23,7 +23,7 @@ import {
   awaitTransactionSignatureConfirmation,
   getCandyMachineState,
   mintOneToken,
-  shortenAddress,
+  // shortenAddress,
 } from "./candy-machine";
 
 const ConnectButton = styled(WalletDialogButton)``;
@@ -44,6 +44,7 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
+  const [date, setDate] = useState(Math.trunc(Date.now()/1000));
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
@@ -60,6 +61,7 @@ const Home = (props: HomeProps) => {
   });
 
   const [startDate, setStartDate] = useState(new Date(props.startDate));
+  const [stDate, setStDate] = useState(1637366400);
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -185,7 +187,6 @@ const Home = (props: HomeProps) => {
           <Card
             raised={true}
             style={{
-              width: "50%",
               backgroundColor: "rgba(16,25,33,0.9)",
               border: "10px solid white",
               borderImageSlice: "1",
@@ -202,7 +203,7 @@ const Home = (props: HomeProps) => {
               </p>
 
               <p>
-                <b>REDEEMED</b> : {itemsRedeemed}
+                <b>CLAIMED</b> : {itemsRedeemed}
               </p>
 
               <p>
@@ -235,6 +236,7 @@ const Home = (props: HomeProps) => {
           </Card>
         ) : null}
       </div>
+      {(date>=stDate)?(
       <Grid
         container
         direction='column'
@@ -250,7 +252,20 @@ const Home = (props: HomeProps) => {
           </MintContainer>
         ) : null}
       </Grid>
-
+      ):(
+        <Grid
+        container
+        justifyContent='center'
+        alignItems='center'
+        style={{
+          marginTop: "50vh",
+        }}
+      >
+        <h1 className="solColor" style={{fontSize:"250%", textShadow:"black 0 0 80px"}}>
+          . COMING . SOON .
+        </h1>
+        </Grid>
+      )}
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
