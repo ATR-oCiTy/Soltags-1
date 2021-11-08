@@ -183,6 +183,7 @@ const Home = (props: HomeProps) => {
       >
         {wallet ? (
           <Card
+            raised={true}
             style={{
               width: "50%",
               backgroundColor: "rgba(16,25,33,0.9)",
@@ -191,16 +192,22 @@ const Home = (props: HomeProps) => {
             <CardContent>
               <p>{wallet.publicKey.toBase58() || ""}</p>
 
-              <p>BALANCE : {(balance || 0).toLocaleString()} SOL</p>
+              <p>
+                <b>BALANCE</b> : {(balance || 0).toLocaleString()} SOL
+              </p>
 
-              <p>REDEEMED : {itemsRedeemed}</p>
+              <p>
+                <b>REDEEMED</b> : {itemsRedeemed}
+              </p>
 
-              <p>REMAINING : {itemsRemaining}</p>
+              <p>
+                <b>REMAINING</b> : {itemsRemaining}
+              </p>
 
               <MintButton
                 disabled={isSoldOut || isMinting || !isActive}
                 onClick={onMint}
-                variant="contained"
+                variant='contained'
               >
                 {isSoldOut ? (
                   "SOLD OUT"
@@ -225,9 +232,9 @@ const Home = (props: HomeProps) => {
       </div>
       <Grid
         container
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
+        direction='column'
+        justifyContent='center'
+        alignItems='center'
         style={{
           marginTop: "30vh",
         }}
