@@ -17,7 +17,8 @@ const FaqComp = (props) => {
         my={1}
         style={{
           borderImageSlice: "1",
-          borderImageSource: "linear-gradient(#DC1FFF, #03E1FF, #00FFA3)",
+          borderImageSource:
+            "linear-gradient(41deg, #DC1FFF, #03E1FF, #00FFA3)",
         }}
       >
         <Accordion square={true}>
