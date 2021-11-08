@@ -7,7 +7,7 @@ import TeamImage2 from "./images/shadow.png";
 import TeamImage3 from "./images/mad.png";
 import TeamImage4 from "./images/darksider.png";
 import artGIF from "./images/tagGIF.gif";
-
+import 'aos/dist/aos.css';
 
 import Home from "./Home";
 
@@ -39,6 +39,8 @@ import ImgCarousel from "./components/ImgCarousel";
 import Faq from "./components/Faq";
 import Team from "./components/Team";
 import { ScatterPlot } from "@material-ui/icons";
+
+const AOS = require("aos");
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -100,6 +102,10 @@ const App = () => {
 
   useEffect(() => {
     console.log("hello");
+    AOS.init({
+      duration: 1000,
+      mirror: true,
+    });
   });
 
   return (
@@ -152,6 +158,8 @@ const App = () => {
           backgroundColor: "#101921;",
           paddingBottom: "100px",
         }}
+        data-aos="flip-right"
+        data-aos-anchor=".roadmapTrigger"
       >
         <Heading
           title={"Roadmap"}
@@ -161,7 +169,7 @@ const App = () => {
         />
       </Grid>
 
-      <Grid container style={{ width: "100%", backgroundColor: "#101921;" }}>
+      <Grid container className="roadmapTrigger" style={{ width: "100%", backgroundColor: "#101921;" }} data-aos="fade-up">
         <Roadmap />
       </Grid>
       <Grid
@@ -171,6 +179,8 @@ const App = () => {
           backgroundColor: "#101921;",
           paddingTop: "100px",
         }}
+        data-aos="flip-left"
+        data-aos-anchor=".faqTrigger"
       >
         <Heading
           title={"FAQ"}
@@ -179,7 +189,7 @@ const App = () => {
           }
         />
       </Grid>
-      <Grid container style={{ width: "100%", backgroundColor: "#101921;" }}>
+      <Grid container className="faqTrigger" style={{ width: "100%", backgroundColor: "#101921;" }} data-aos="fade-up">
         <Faq />
       </Grid>
       <Grid
@@ -190,6 +200,8 @@ const App = () => {
           paddingTop: "100px",
           paddingBottom: "40px",
         }}
+        data-aos="flip-right"
+        data-aos-anchor=".teamTrigger"
       >
         <Heading
           title={"Team"}
@@ -200,11 +212,12 @@ const App = () => {
       </Grid>
       <Grid
         container
+        className="teamTrigger"
         style={{
           width: "100%",
           backgroundColor: "#101921;",
-          paddingLeft: "40px",
         }}
+        data-aos="fade-up"
       >
         <Team image={TeamImage1} imageName={"Soldier"} />
         <Team image={TeamImage2} imageName={"Alex"} />

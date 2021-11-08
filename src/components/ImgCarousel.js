@@ -163,8 +163,9 @@ const ImgCarousel = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        data-aos='fade-up'
       >
-        <div className='slides'>
+        <div className='slides' >
           {[...slides, ...slides, ...slides].map((slide, i) => {
             let offset = slides.length + (state.slideIndex - i);
             return <Slide slide={slide} offset={offset} key={i} />;
