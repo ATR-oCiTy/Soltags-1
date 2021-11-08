@@ -187,6 +187,11 @@ const Home = (props: HomeProps) => {
             style={{
               width: "50%",
               backgroundColor: "rgba(16,25,33,0.9)",
+              border: "10px solid white",
+              borderImageSlice: "1",
+              borderImageSource:
+                "linear-gradient(41deg, #DC1FFF, #03E1FF, #00FFA3)",
+              borderRadius: "borderRadius",
             }}
           >
             <CardContent>

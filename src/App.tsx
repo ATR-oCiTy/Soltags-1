@@ -1,5 +1,5 @@
 import "./App.css";
-import { useMemo } from "react";
+import React, { useMemo, FC } from "react";
 import { useEffect } from "react";
 import Image from "./images/BG4W.png";
 import TeamImage1 from "./images/alex.png";
@@ -7,7 +7,7 @@ import TeamImage2 from "./images/shadow.png";
 import TeamImage3 from "./images/mad.png";
 import TeamImage4 from "./images/darksider.png";
 import artGIF from "./images/tagGIF.gif";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 import Home from "./Home";
 
@@ -38,7 +38,6 @@ import Heading from "./components/HeadingComp";
 import ImgCarousel from "./components/ImgCarousel";
 import Faq from "./components/Faq";
 import Team from "./components/Team";
-import { ScatterPlot } from "@material-ui/icons";
 
 const AOS = require("aos");
 
@@ -130,7 +129,7 @@ const App = () => {
                 <Box style={{ height: "20%", width: "100%" }}>
                   <Navbar />
                 </Box>
-                <Grid item xs={12} style={{height:"30vh"}}>
+                <Grid item xs={12} style={{ height: "30vh" }}>
                   <Home
                     candyMachineId={candyMachineId}
                     config={config}
@@ -146,7 +145,7 @@ const App = () => {
         </ConnectionProvider>
       </Grid>
       <Grid container style={{ height: "100vh", width: "100%" }}>
-        <Detail image={artGIF}/>
+        <Detail image={artGIF} />
       </Grid>
       <Grid container style={{ height: "100vh", width: "100%" }}>
         <ImgCarousel />
@@ -158,8 +157,8 @@ const App = () => {
           backgroundColor: "#101921;",
           paddingBottom: "100px",
         }}
-        data-aos="flip-right"
-        data-aos-anchor=".roadmapTrigger"
+        data-aos='flip-right'
+        data-aos-anchor='.roadmapTrigger'
       >
         <Heading
           title={"Roadmap"}
@@ -169,7 +168,12 @@ const App = () => {
         />
       </Grid>
 
-      <Grid container className="roadmapTrigger" style={{ width: "100%", backgroundColor: "#101921;" }} data-aos="fade-up">
+      <Grid
+        container
+        className='roadmapTrigger'
+        style={{ width: "100%", backgroundColor: "#101921;" }}
+        data-aos='fade-up'
+      >
         <Roadmap />
       </Grid>
       <Grid
@@ -179,8 +183,8 @@ const App = () => {
           backgroundColor: "#101921;",
           paddingTop: "100px",
         }}
-        data-aos="flip-left"
-        data-aos-anchor=".faqTrigger"
+        data-aos='flip-left'
+        data-aos-anchor='.faqTrigger'
       >
         <Heading
           title={"FAQ"}
@@ -189,7 +193,12 @@ const App = () => {
           }
         />
       </Grid>
-      <Grid container className="faqTrigger" style={{ width: "100%", backgroundColor: "#101921;" }} data-aos="fade-up">
+      <Grid
+        container
+        className='faqTrigger'
+        style={{ width: "100%", backgroundColor: "#101921;" }}
+        data-aos='fade-up'
+      >
         <Faq />
       </Grid>
       <Grid
@@ -200,8 +209,8 @@ const App = () => {
           paddingTop: "100px",
           paddingBottom: "40px",
         }}
-        data-aos="flip-right"
-        data-aos-anchor=".teamTrigger"
+        data-aos='flip-right'
+        data-aos-anchor='.teamTrigger'
       >
         <Heading
           title={"Team"}
@@ -212,12 +221,12 @@ const App = () => {
       </Grid>
       <Grid
         container
-        className="teamTrigger"
+        className='teamTrigger'
         style={{
           width: "100%",
           backgroundColor: "#101921;",
         }}
-        data-aos="fade-up"
+        data-aos='fade-up'
       >
         <Team image={TeamImage1} imageName={"Soldier"} />
         <Team image={TeamImage2} imageName={"Alex"} />
