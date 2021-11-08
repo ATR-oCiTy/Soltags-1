@@ -61,7 +61,7 @@ const Home = (props: HomeProps) => {
   });
 
   const [startDate, setStartDate] = useState(new Date(props.startDate));
-  const [stDate, setStDate] = useState(1637366400);
+  const [stDate, setStDate] = useState(1636243200);
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();

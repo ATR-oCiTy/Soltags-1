@@ -30,6 +30,7 @@ const Detail = ({ image }) => {
           justifyContent: "center",
         }}
       >
+<<<<<<< Updated upstream
         <div
           data-aos='fade-right'
           style={{ paddingLeft: "20%", paddingRight: "20%" }}
@@ -44,6 +45,14 @@ const Detail = ({ image }) => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
+=======
+        <div data-aos="fade-right" style={{ paddingLeft: "20%", paddingRight: "20%" }}>
+          <h2 style={{fontSize:"300%"}} className="solColor">Ten-Hut !</h2>
+          <p style={{color: "rgba(255,255,255,.7)", textAlign:"justify", lineHeight:"160%", fontWeight:"bold", fontSize:"130%"}}>
+          WW3 is coming up, And all are recruited for war, death is inevitable for many.
+          <span className="solColor" style={{fontSize:"140%"}}> 8888 unique SolTags</span> with superior traits one over the other,The idea is to create a multiverse in which war heroes are glorified with  unique soltags.
+          So without further ado... <br/><br/><span className="solColor" style={{fontSize:"140%"}}>GET YOUR SOLS ENGRAVED.</span>
+>>>>>>> Stashed changes
           </p>
         </div>
       </Grid>
