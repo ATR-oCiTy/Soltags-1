@@ -2,11 +2,11 @@ import { Grid } from "@material-ui/core";
 import { useEffect } from "react";
 const AOS = require("aos");
 
-const Detail = ({image}) => {
+const Detail = ({ image }) => {
   useEffect(() => {
     console.log("hello");
     AOS.init({
-      duration: 1000,
+      duration: 600,
       mirror: true,
     });
   });
@@ -30,8 +30,13 @@ const Detail = ({image}) => {
           justifyContent: "center",
         }}
       >
-        <div data-aos="fade-right" style={{ paddingLeft: "20%", paddingRight: "20%" }}>
-          <h2 className="solColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+        <div
+          data-aos='fade-right'
+          style={{ paddingLeft: "20%", paddingRight: "20%" }}
+        >
+          <h2 className='solColor'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h2>
           <p>
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -52,12 +57,11 @@ const Detail = ({image}) => {
           justifyContent: "center",
         }}
       >
-        <div data-aos="fade-left" style={{ paddingLeft: "15%", paddingRight: "15%" }}>
-          <img
-            src={image}
-            alt='...'
-            style={{ height: "60vh" }}
-          />
+        <div
+          data-aos='fade-left'
+          style={{ paddingLeft: "15%", paddingRight: "15%" }}
+        >
+          <img src={image} alt='...' style={{ height: "60vh" }} />
         </div>
       </Grid>
     </Grid>

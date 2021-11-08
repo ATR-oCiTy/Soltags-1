@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useMemo, FC } from "react";
+import { useMemo } from "react";
 import { useEffect } from "react";
 import Image from "./images/BG4W.png";
 import TeamImage1 from "./images/alex.png";
@@ -101,7 +101,7 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 600,
       mirror: true,
     });
   });
@@ -124,7 +124,14 @@ const App = () => {
                 }}
               >
                 <Background />
-                <Box style={{ height: "20%", width: "100%", paddingLeft: "20vh", paddingRight:"20vh" }}>
+                <Box
+                  style={{
+                    height: "20%",
+                    width: "100%",
+                    paddingLeft: "20vh",
+                    paddingRight: "20vh",
+                  }}
+                >
                   <Navbar />
                 </Box>
                 <Grid item xs={12} style={{ height: "30vh" }}>
@@ -179,7 +186,7 @@ const App = () => {
         style={{
           width: "100%",
           backgroundColor: "#101921;",
-          paddingTop: "100px",
+          paddingTop: "75px",
         }}
         data-aos='flip-left'
         data-aos-anchor='.faqTrigger'
@@ -204,7 +211,7 @@ const App = () => {
         style={{
           width: "100%",
           backgroundColor: "#101921;",
-          paddingTop: "100px",
+          paddingTop: "75px",
           paddingBottom: "40px",
         }}
         data-aos='flip-right'
