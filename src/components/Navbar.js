@@ -7,15 +7,16 @@ const Navbar = () => {
   return (
     <Grid container item xs={12}>
       <Grid container item>
-        <Grid item xs={10}>
+        <Grid item xs={12} md={2} style={{display:"flex", justifyContent:"center"}}>
           <img
             src={Logo}
-            height='176px'
-            width='176px'
-            style={{ position: "relative", bottom: "25px" }}
+            width='200px'
+            style={{ position: "relative", bottom: "25px", imageResolution: "500dpi", imageRendering:"-webkit-optimize-contrast" }}
           />
         </Grid>
-        <Grid item xs={1}>
+        <Grid item xs={0} md={8} style={{display:"flex", justifyContent:"center"}}>
+        </Grid>
+        <Grid item xs={6} md={1} style={{display:"flex", justifyContent:"center"}}>
           <div className='hvr-wobble-to-top-right'>
             <a href='#'>
               <img
@@ -23,18 +24,20 @@ const Navbar = () => {
                 alt='Twitter'
                 height='36px'
                 width='36px'
+                style={{imageResolution: "500dpi", imageRendering:"-webkit-optimize-contrast"}}
               />
             </a>
           </div>
         </Grid>
-        <Grid item xs={1}>
+        <Grid item xs={6} md={1} style={{display:"flex", justifyContent:"center"}}>
           <div className='hvr-wobble-to-top-right'>
-            <a href='#'>
+            <a href='https://discord.gg/389YKrvf'>
               <img
                 src={ImageDiscord}
                 alt='Discord'
                 height='40px'
                 width='40px'
+                style={{imageResolution: "500dpi", imageRendering:"-webkit-optimize-contrast"}}
               />
             </a>
           </div>

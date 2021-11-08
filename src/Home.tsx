@@ -26,6 +26,8 @@ import {
   // shortenAddress,
 } from "./candy-machine";
 
+import "./Home.css";
+
 const ConnectButton = styled(WalletDialogButton)``;
 
 const CounterText = styled.span``; // add your styles here
@@ -44,7 +46,7 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
-  const [date, setDate] = useState(Math.trunc(Date.now()/1000));
+  const [date, setDate] = useState(Math.trunc(Date.now() / 1000));
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
@@ -195,7 +197,9 @@ const Home = (props: HomeProps) => {
               borderRadius: "borderRadius",
             }}
           >
-            <CardContent>
+            <CardContent style={{
+              fontSize: "1.3rem",
+            }}>
               <p>{wallet.publicKey.toBase58() || ""}</p>
 
               <p>
@@ -213,7 +217,14 @@ const Home = (props: HomeProps) => {
               <MintButton
                 disabled={isSoldOut || isMinting || !isActive}
                 onClick={onMint}
-                variant='contained'
+                variant="contained"
+                style={{
+                  background: "rgba(16,25,33,0.8)",
+                  border: "2px solid #00FFA3",
+                  color: "#DC1FFF",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                }}
               >
                 {isSoldOut ? (
                   "SOLD OUT"
@@ -236,34 +247,49 @@ const Home = (props: HomeProps) => {
           </Card>
         ) : null}
       </div>
-      {(date>=stDate)?(
-      <Grid
-        container
-        direction='column'
-        justifyContent='center'
-        alignItems='center'
-        style={{
-          marginTop: "30vh",
-        }}
-      >
-        {!wallet ? (
-          <MintContainer>
-            {!wallet ? <ConnectButton>Connect Wallet</ConnectButton> : null}
-          </MintContainer>
-        ) : null}
-      </Grid>
-      ):(
+      {date >= stDate ? (
         <Grid
-        container
-        justifyContent='center'
-        alignItems='center'
-        style={{
-          marginTop: "50vh",
-        }}
-      >
-        <h1 className="solColor" style={{fontSize:"250%", textShadow:"black 0 0 80px"}}>
-          . COMING . SOON .
-        </h1>
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          style={{
+            marginTop: "30vh",
+          }}
+        >
+          {!wallet ? (
+            <MintContainer>
+              {!wallet ? (
+                <ConnectButton
+                  style={{
+                    background: "rgba(16,25,33,0.8)",
+                    border: "2px solid #00FFA3",
+                    color: "#DC1FFF",
+                    fontSize: "1.5rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Connect Wallet
+                </ConnectButton>
+              ) : null}
+            </MintContainer>
+          ) : null}
+        </Grid>
+      ) : (
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          style={{
+            marginTop: "50vh",
+          }}
+        >
+          <h1
+            className="solColor"
+            style={{ fontSize: "250%", textShadow: "black 0 0 80px" }}
+          >
+            . COMING . SOON .
+          </h1>
         </Grid>
       )}
       <Snackbar
