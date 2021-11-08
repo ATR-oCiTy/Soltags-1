@@ -10,7 +10,6 @@ import img6 from ".././images/img6.jpg";
 import img7 from ".././images/img7.jpg";
 import img8 from ".././images/img8.jpg";
 
-
 const slides = [
   {
     title: "",
@@ -23,7 +22,7 @@ const slides = [
     subtitle: "",
     description: "",
     image: img2,
-    },
+  },
   {
     title: "",
     subtitle: "",
@@ -40,7 +39,7 @@ const slides = [
     title: "",
     subtitle: "",
     description: "",
-    image:  img5,
+    image: img5,
   },
   {
     title: "",
@@ -145,11 +144,11 @@ function Slide({ slide, offset }) {
           height: "60vh",
         }}
       >
-        <div className='slideContentInner'>
+        {/* <div className='slideContentInner'>
           <h2 className='slideTitle'>{slide.title}</h2>
           <h3 className='slideSubtitle'>{slide.subtitle}</h3>
           <p className='slideDescription'>{slide.description}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -174,7 +173,7 @@ const ImgCarousel = () => {
       justifyContent='center'
       style={{
         minHeight: "100vh",
-        maxWidth: "100vw",
+        maxWidth: "100%",
       }}
     >
       <Grid
@@ -187,7 +186,7 @@ const ImgCarousel = () => {
         }}
         data-aos='fade-up'
       >
-        <div className='slides' >
+        <div className='slides'>
           {[...slides, ...slides, ...slides].map((slide, i) => {
             let offset = slides.length + (state.slideIndex - i);
             return <Slide slide={slide} offset={offset} key={i} />;
